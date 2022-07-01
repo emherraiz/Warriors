@@ -16,8 +16,8 @@ class Tipos_de_ataque(Enum):
 class Warrior(Vida):
     def __init__(self, tipo, arma, salud, ataque, defensa):
         # Generamos excepciones en caso de que el formato introducido en el constructor sea incorrecto
-        #if type(tipo) != Tipos_de_guerrero or type(arma) != Tipos_de_ataque:
-            #raise TypeError("El formato introducido es incorrecto")
+        if type(tipo) != Tipos_de_guerrero or type(arma) != Tipos_de_ataque:
+            raise TypeError("El formato introducido es incorrecto")
 
         if type(salud) != int or type(ataque) != int or type(defensa) != int:
             raise TypeError("El formato introducido es incorrecto")
@@ -75,4 +75,4 @@ class Warrior(Vida):
 
 tipo_1 = Tipos_de_ataque
 tipo_2 = Tipos_de_guerrero
-a = Warrior(tipo_2, tipo_1, 10, -2, -3)
+a = Warrior(Tipos_de_ataque(), Tipos_de_guerrero(), 10, -2, -3)
