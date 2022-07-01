@@ -6,18 +6,26 @@ class Tipos_de_guerrero(Enum):
     MMA = 3
 
 class Tipos_de_ataque(Enum):
-    Puñetazo = 0
-    Patada = 1
-    Codazo = 2
-    Espada = 3
+    Puñetazo = 4
+    Patada = 6
+    Codazo = 8
+    Espada = 10
 
 
 class Warriors():
     def __init__(self, tipo, arma, salud, ataque, defensa):
-        # Generamos excepción en caso de que el formato introducido en el constructor sea incorrecto
+        # Generamos excepciones en caso de que el formato introducido en el constructor sea incorrecto
         if type(tipo) != Tipos_de_guerrero or type(arma) != Tipos_de_ataque:
             raise TypeError("El formato introducido es incorrecto")
 
+        if type(salud) != int or type(ataque) != float or type(defensa) != float:
+            raise TypeError("El formato introducido es incorrecto")
+
+        if not 1 <= salud <= 100:
+            raise ValueError("La salud del luchador no puede ser menor que 1 ni mayor que 100")
+
+        if not 1 <= defensa <= 10:
+            raise ValueError('La defensa del luchador debe tener un valor entre 1 y 10')
         self.__tipo = tipo
         self.__arma = arma
         self.__salud = salud
