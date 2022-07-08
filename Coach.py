@@ -1,9 +1,7 @@
 
-from warrior import *
+from warrior import Warrior
 class Coach():
     def __init__(self, nombre, lista_guerreros):
-        print(type(lista_guerreros))
-        print(isinstance(lista_guerreros, Warrior))
         if not (isinstance(nombre, str) or isinstance(lista_guerreros, Warrior) or isinstance(lista_guerreros, list)):
             raise TypeError("El formato introducido es incorrecto")
 
@@ -25,9 +23,6 @@ class Coach():
     def get_lista_guerreros(self):
         return self.__lista_guerreros
 
-    def set_nombre(self, nombre):
-        self.__nombre = nombre
-
     def añadir_guerreros(self, guerrero):
         if isinstance(guerrero, Warrior):
             self.__lista_guerreros.append()
@@ -39,8 +34,13 @@ class Coach():
         if not isinstance(posicion, int):
             raise TypeError("El formato introducido es incorrecto")
 
+        posiciom -= 1
+
         if 0 <= posicion < len(self.__lista_guerreros):
             self.__lista_guerreros.remove(self.__lista_guerreros[posicion])
+
+        else:
+            raise ValueError("Se tiene que introducir una posición correcta")
 
     def is_undefeated(self):
         equipo_vivo = False
