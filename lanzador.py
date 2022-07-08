@@ -14,7 +14,7 @@ from Coach import Coach
 
 
 def lanzar():
+    entrenadores = []
     for i in range(2):
-        print(i)
-
-lanzar()
+        entrenador = input(f'Entrenador {i+1} introduce tu nombre:')
+        
