@@ -15,6 +15,12 @@ from Coach import Coach
 
 def lanzar():
     entrenadores = []
+    csvs = ['coach_1_warriors.csv', 'coach_2_warriors.csv']
     for i in range(2):
         entrenador = input(f'Entrenador {i+1} introduce tu nombre:')
+        with open(csvs[i], newline='') as csv_file:
+            reader = csv.reader(csv_file)
+            data_from_file = list(reader)
         
+        print(data_from_file)
+
