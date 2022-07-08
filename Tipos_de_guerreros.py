@@ -17,5 +17,5 @@ class Tipos_de_guerreros(Enum):
         elif str_guerrero == 'mma':
             return Tipos_de_guerreros.MMA
         else:
-            raise TypeError('No existe el tipo de guerrero' + str_guerrero)
+            raise TypeError('No existe el tipo de guerrero ' + str_guerrero)
 
