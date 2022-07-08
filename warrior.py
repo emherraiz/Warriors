@@ -73,6 +73,7 @@ class Warrior(Vida):
         return self.is_vivo(self._salud)
 
     def fight_attack(self, warrior_to_attack):
+        print(f'El guerrero {str(self)} ataca al guerrero {str(warrior_to_attack)}')
         warrior_to_attack.fight_defense(self.__ataque)
 
     def fight_defense(self, points_of_damage):
