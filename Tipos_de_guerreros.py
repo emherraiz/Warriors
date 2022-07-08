@@ -9,9 +9,9 @@ class Tipos_de_guerreros(Enum):
     def from_str(str_guerrero):
         str_guerrero = str_guerrero.lower()
         if str_guerrero == 'boxer':
-            return Tipos_de_guerreros.BOXER
+            return Tipos_de_guerreros.Boxeador
         elif str_guerrero == 'gladiator':
-            return Tipos_de_guerreros.GLADIATOR
+            return Tipos_de_guerreros.Gladiador
         elif str_guerrero == 'ufc':
             return Tipos_de_guerreros.UFC
         elif str_guerrero == 'mma':
