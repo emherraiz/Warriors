@@ -18,11 +18,20 @@ def lanzar():
     csvs = ['coach_1_warriors.csv', 'coach_2_warriors.csv']
     for i in range(2):
         entrenador = input(f'Entrenador {i+1} introduce tu nombre:')
-        with open(csvs[i], newline='') as csv_file:
-            reader = csv.reader(csv_file)
-            data_from_file = list(reader)
-        
-        print(data_from_file)
+        try:
+            with open(csvs[i], newline='') as csv_file:
+                reader = csv.reader(csv_file)
+                data_from_file = list(reader)
+
+        except Exception as e:
+            print('No se han podido leer adecuadamente los archivos csv')
+            print(e)
+
+        for dato_de_csv in data_from_file:
+            id = int(dato_de_csv[0])
+            tipo_de_guerrero = 
+
+
 
 
 lanzar()
