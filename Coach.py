@@ -69,12 +69,3 @@ class Coach():
 
 
 
-print(isinstance([1,2], list or int))
-
-a = Warrior(1, Tipos_de_guerreros.MMA, Tipos_de_armas.Patada, 12, 3, 3)
-b = Warrior(2, Tipos_de_guerreros.Boxeador, Tipos_de_armas.Patada, 12, 3, 3)
-
-print(not isinstance(a, Warrior or list))
-print(isinstance('doa', str))
-x = Coach('dos', [a, b])
-print(x)
