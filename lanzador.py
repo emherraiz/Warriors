@@ -14,7 +14,7 @@ from Coach import Coach
 
 
 def lanzar():
-    for i in range(0, 1):
+    for i in range(2):
         print(i)
 
 lanzar()
