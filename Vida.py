@@ -1,4 +1,3 @@
-import random
 class Vida():
     # Le pasamos la vida que tiene al constructor
     def __init__(self, salud):
@@ -27,5 +26,3 @@ class Vida():
     # En caso de que usemos un print nos mostrará la cantidad de vida
     def __str__(self):
         return f'Vida: {self._salud}'
-
-print(random.randint(0,1))
