@@ -82,5 +82,5 @@ class Super_guerrero(Warrior):
 
 
 
-a = Super_guerrero(1, Tipos_de_guerreros.MMA, Tipos_de_armas.Patada, 12, 3, 11, 11)
+a = Super_guerrero(1, Tipos_de_guerreros.MMA, Tipos_de_armas.Patada, 12, 3, 9, 11, 11)
 
