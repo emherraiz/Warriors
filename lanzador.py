@@ -24,3 +24,5 @@ def lanzar():
         
         print(data_from_file)
 
+
+lanzar()
